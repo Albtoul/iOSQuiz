@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuestionLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiB-Wk-vJl">
-                                <rect key="frame" x="20" y="44" width="374" height="55"/>
+                                <rect key="frame" x="64" y="0.0" width="768" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="Zk1-ZP-SM9"/>
                                 </constraints>
@@ -25,24 +25,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fe-iF-9bK">
-                                <rect key="frame" x="20" y="107" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fe-iF-9bK">
+                                <rect key="frame" x="64" y="63" width="51" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mkx-pd-g3A"/>
+                                </constraints>
                                 <state key="normal" title="Answer"/>
                                 <connections>
                                     <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6dE-8x-CSh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7c-p1-bry">
-                                <rect key="frame" x="362" y="107" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7c-p1-bry">
+                                <rect key="frame" x="800" y="63" width="32" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NuV-Lf-sQk"/>
+                                </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SKw-We-1ou"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AnswerLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxE-hY-5rw">
-                                <rect key="frame" x="0.0" y="348" width="414" height="200"/>
+                                <rect key="frame" x="44" y="107" width="808" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="uyg-DG-3Ii"/>
                                 </constraints>
@@ -55,9 +59,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QiB-Wk-vJl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4Af-bI-WuN"/>
+                            <constraint firstItem="r7c-p1-bry" firstAttribute="top" secondItem="QiB-Wk-vJl" secondAttribute="bottom" constant="8" symbolic="YES" id="GGP-x2-KF5"/>
+                            <constraint firstItem="3fe-iF-9bK" firstAttribute="top" secondItem="QiB-Wk-vJl" secondAttribute="bottom" constant="8" symbolic="YES" id="LL7-BT-LNB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XxE-hY-5rw" secondAttribute="trailing" id="OlX-ku-zdI"/>
+                            <constraint firstItem="r7c-p1-bry" firstAttribute="firstBaseline" secondItem="3fe-iF-9bK" secondAttribute="firstBaseline" id="Pxm-iy-3o9"/>
                             <constraint firstItem="XxE-hY-5rw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WSC-Ov-FAH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QiB-Wk-vJl" secondAttribute="trailing" constant="20" id="XXP-iX-uL0"/>
+                            <constraint firstItem="3fe-iF-9bK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bEI-P1-oHk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r7c-p1-bry" secondAttribute="trailing" constant="20" id="bJ1-Mf-dwS"/>
                             <constraint firstItem="XxE-hY-5rw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gTc-c7-Noa"/>
                             <constraint firstItem="XxE-hY-5rw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jdj-EV-iPc"/>
                             <constraint firstItem="QiB-Wk-vJl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mxL-ob-Fz6"/>
